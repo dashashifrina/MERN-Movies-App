@@ -1,0 +1,20 @@
+branches:
+  defaultBase: main
+  release:
+    enabled: false
+    pattern: release/*
+    base: main
+pr:
+  merge:
+    method: squash
+# TODO: Set preview.primaryEnvironment and preview.environments if repo has staging/preview deployments
+# preview:
+#   primaryEnvironment: staging
+#   environments:
+#     staging:
+#       urlTemplate: 'https://pr-{prNumber}-staging.example.pages.dev'
+#       backendBaseUrl: 'https://api.stage.example.com'
+#   deploy:
+#     pollIntervalSeconds: 30
+#     timeoutMinutes: 10
+# TODO: Set notifications.slack.mergeAnnouncements if repo has a Slack channel
